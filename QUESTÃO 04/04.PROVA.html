@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Verificador</title>
+  </head>
+  <body>
+    <h1>Verificador de Número Par ou Absoluto</h1>
+    <p>Insira um número:</p>
+    <input type="text" id="numeroInput">
+    <button onclick="verificar()">Verificar</button>
+    <script>
+      function verificar() {
+        var numero = parseInt(document.getElementById("numeroInput").value);
+        if (isNaN(numero)) {
+          alert("Por favor, insira um número válido.");
+        } else {
+          var resultado = "";
+          if (numero % 2 == 0) {
+            resultado += "O número é par.\n";
+          } else {
+            resultado += "O número é ímpar.\n";
+          }
+          resultado += "O valor absoluto do número é " + Math.abs(numero) + ".";
+          alert(resultado);
+        }
+      }
+    </script>
+  </body>
+</html>
+  

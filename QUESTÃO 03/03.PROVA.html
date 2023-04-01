@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+<h1>Formulário</h1>
+<form>
+<div class="form-group">
+<label for="inputNome">Nome:</label>
+<input type="text" class="form-control" id="inputNome">
+</div>
+<div class="form-group">
+<label for="inputSobrenome">Sobrenome:</label>
+<input type="text" class="form-control" id="inputSobrenome">
+</div>
+<button type="button" class="btn btn-primary" id="btnEnviar">Enviar</button>
+</form>
+</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("#btnEnviar").click(function(){
+				var nome = $("#inputNome").val();
+				var sobrenome = $("#inputSobrenome").val();
+				if(nome != "" && sobrenome != ""){
+					alert("Seja Bem-vindo, " + nome + " " + sobrenome + "!");
+				}
+				else{
+					alert("Por favor, todos os campos são obrigatórios.");
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
